@@ -9,7 +9,7 @@ pipeline {
                 sh "go mod download"
                 sh "go get github.com/nats-io/stan.go"
                 sh "go build -o natsapp"
-                echo "Hello, Ivan!"
+                echo "Hello, Artyom!"
             }
         }
     }
