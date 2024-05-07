@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Test stage') {
             steps {
-                echo "Test string output"
+                echo "Test string output 2"
                 sh "go version"
             }
         }
