@@ -6,6 +6,7 @@ pipeline {
             steps {
                 echo "Test string output 1"
                 sh "go version"
+                sh "go mod download"
             }
         }
     }
