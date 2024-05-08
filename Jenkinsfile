@@ -15,7 +15,7 @@ pipeline {
         stage('Deployment') {
                     steps {
                         echo "Connecting to devops-server by SSH"
-                        sh "ssh temon01@51.250.86.139"
+                        sh "ssh -tt temon01@51.250.86.139"
                         echo "Successful connection to devops-server"
 
                         echo "Check pwd test"
