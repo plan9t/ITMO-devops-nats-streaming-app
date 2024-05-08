@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Test stage') {
             steps {
-                echo "Test string output 2"
-                sh "go version"
+                echo "Downloading dependencies and building"
                 sh "go mod download"
                 sh "go get github.com/nats-io/stan.go"
-                sh "go build -o natsapp"
-                echo "Hello, Artyom!"
+                sh "go build -o /home/temon01/go_builded"
+
+                echo "Команда для подключения по SSH: ssh temon01@51.250.86.139"
             }
         }
     }
