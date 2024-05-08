@@ -2,15 +2,27 @@ pipeline {
     agent any
 
     stages {
-        stage('Test stage') {
+        stage('Build') {
             steps {
                 echo "Downloading dependencies and building"
                 sh "go mod download"
                 sh "go get github.com/nats-io/stan.go"
-                sh "go build -o /home/temon01/go_builded"
-
-                echo "Команда для подключения по SSH: ssh temon01@51.250.86.139"
+                sh "go build -o nats-app"
+                echo "Successful building nats-streaming-app"
             }
         }
+
+        stage('Deployment') {
+                    steps {
+                        echo "Connecting to devops-server by SSH"
+                        sh "ssh temon01@51.250.86.139"
+                        echo "Successful connection to devops-server"
+
+                        echo "Check pwd"
+                        sh "pwd"
+
+
+                    }
+                }
     }
 }
