@@ -18,7 +18,7 @@ pipeline {
                         sh "ssh temon01@51.250.86.139"
                         echo "Successful connection to devops-server"
 
-                        echo "Check pwd"
+                        echo "Check pwd test"
                         sh "pwd"
 
 
