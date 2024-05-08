@@ -18,7 +18,7 @@ pipeline {
                         sh "sudo ssh -tt temon01@51.250.86.139"
                         echo "Successful connection to devops-server"
 
-                        echo "Check pwd test with sudo"
+                        echo "Check pwd test with changed sudoers"
                         sh "pwd"
 
 
