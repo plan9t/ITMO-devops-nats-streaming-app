@@ -48,7 +48,7 @@ pwd
 sh "cd /var/lib/jenkins/workspace/nats-streaming"
 sh "pwd"
 sh "nohup ./nats-app &"
-echo "Successful starting nats-app"
+echo "Successful starting nats-app 1"
 
 sh "sudo telnet localhost 4222"
 exit
