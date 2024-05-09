@@ -40,21 +40,8 @@ pipeline {
                 // ПРОВЕРИТЬ ПРАВИЛЬНО ЛИ СОЗДАН И ЗАПУЩЕН СЕРВЕР
 
 
-
-                 sh '''
-ssh -tt temon01@51.250.86.139 << EOF
-whoami
-pwd
-cd /var/lib/jenkins/workspace/nats-streaming
-pwd
-nohup ./nats-app &
-echo "Successful starting nats-app 1"
-sh "whoami"
-sudo telnet localhost 4222
-exit
-EOF
-                 '''
-                 echo "WORKING"
+                sh "ssh -tt temon01@51.250.86.139 'whoami; pwd; cd /var/lib/jenkins/workspace/nats-streaming; nohup ./nats-app &; sudo telnet localhost 4222'"
+                echo "WORKING"
             }
         }
     }
