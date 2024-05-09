@@ -12,7 +12,7 @@ import (
 	"github.com/nats-io/stan.go"
 )
 
-var natsURL = "localhost:4222"
+var natsURL = "nats://localhost:4222"
 var clusterID = "WB-cluster"
 
 func main() {

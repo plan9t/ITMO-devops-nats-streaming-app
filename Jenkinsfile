@@ -45,12 +45,11 @@ pipeline {
 ssh -tt temon01@51.250.86.139 << EOF
 whoami
 pwd
-sh "cd /var/lib/jenkins/workspace/nats-streaming"
-sh "pwd"
-sh "nohup ./nats-app &"
+cd /var/lib/jenkins/workspace/nats-streaming
+pwd
+nohup ./nats-app &
 echo "Successful starting nats-app 1"
-
-sh "sudo telnet localhost 4222"
+sudo telnet localhost 4222
 exit
 EOF
                  '''
