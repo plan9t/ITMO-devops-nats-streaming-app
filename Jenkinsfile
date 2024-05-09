@@ -17,8 +17,8 @@ pipeline {
                         echo "Check who am i before ssh connection."
                         sh "whoami"
 
-                        echo "Connecting to devops-server by SSH"
-                        sh "ssh -tt temon01@51.250.86.139"
+                        echo "Connecting to devops-server by SSH and execute whoami and pwd commands"
+                        sh "ssh -tt temon01@51.250.86.139 'whoami; pwd'"
                         echo "Successful connection to devops-server"
 
                         echo "Check who am i after ssh connection."
