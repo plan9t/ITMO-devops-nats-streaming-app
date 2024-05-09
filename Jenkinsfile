@@ -14,11 +14,17 @@ pipeline {
 
         stage('Deployment') {
                     steps {
+                        echo "Check who am i before ssh connection."
+                        sh "whoami"
+
                         echo "Connecting to devops-server by SSH"
                         sh "ssh -tt temon01@51.250.86.139"
                         echo "Successful connection to devops-server"
 
-                        echo "Check pwd test with changed sudoers on jenkins-server"
+                        echo "Check who am i after ssh connection."
+                        sh "whoami"
+
+                        echo "Check pwd test with jenkins ssh keys generated"
                         sh "pwd"
 
 
