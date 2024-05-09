@@ -18,10 +18,7 @@ pipeline {
                         sh "whoami"
 
                         echo "Connecting to devops-server by SSH and execute whoami and pwd commands"
-                        sh "ssh -tt temon01@51.250.86.139 '
-                        whoami;
-                        pwd
-                        '"
+                        sh "ssh -tt temon01@51.250.86.139 'whoami; pwd'"
                         echo "Successful connection to devops-server"
 
                         echo "Check who am i after ssh connection."
@@ -32,6 +29,28 @@ pipeline {
 
 
                     }
-                }
+        }
+
+        stage('Deployment new syntax') {
+                            steps {
+                                sh '''
+                                    echo "Check who am i before ssh connection."
+                                    whoami
+
+                                    echo "Connecting to devops-server by SSH and executing commands"
+                                    ssh -tt temon01@51.250.86.139 << EOF
+                                        whoami
+                                        pwd
+                                    EOF
+                                    echo "Commands executed on devops-server"
+
+                                    echo "Check who am i after ssh connection."
+                                    whoami
+
+                                    echo "Check pwd on Jenkins server"
+                                    pwd
+                                '''
+                            }
+        }
     }
 }
