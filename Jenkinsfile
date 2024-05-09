@@ -33,7 +33,7 @@ pipeline {
                 // ПРОВЕРИТЬ ПРАВИЛЬНО ЛИ СОЗДАН И ЗАПУЩЕН СЕРВЕР
 
 
-                sh "ssh -tt temon01@51.250.86.139 'whoami; pwd; cd /var/lib/jenkins/workspace/nats-streaming; nohup ./nats-app &; sudo telnet localhost 4222;'"
+                sh "ssh -tt temon01@51.250.86.139 'whoami; pwd; cd /var/lib/jenkins/workspace/nats-streaming; nohup ./nats-app & sudo telnet localhost 4222;'"
                 echo "WORKING"
             }
         }
