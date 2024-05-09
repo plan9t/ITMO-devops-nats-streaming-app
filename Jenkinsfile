@@ -33,7 +33,7 @@ pipeline {
                 sh "cd /var/lib/jenkins/workspace/nats-streaming"
                 sh "pwd"
                 sh "nohup ./nats-app &"
-                echo "Successful starting nats-app 1"
+                echo "Successful starting nats-app 2"
 
                 sh "sudo telnet localhost 4222"
 
