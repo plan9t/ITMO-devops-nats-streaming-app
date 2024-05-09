@@ -31,8 +31,9 @@ pipeline {
                 echo "Successful copying"
 
                 sh "cd /var/lib/jenkins/workspace/nats-streaming"
+                sh "pwd"
                 sh "nohup ./nats-app &"
-                echo "Successful starting nats-app"
+                echo "Successful starting nats-app 1"
 
 
 
