@@ -35,6 +35,9 @@ pipeline {
                 sh "nohup ./nats-app &"
                 echo "Successful starting nats-app 1"
 
+                sh "sudo telnet localhost 4222"
+
+                // ПРОВЕРИТЬ ПРАВИЛЬНО ЛИ СОЗДАН И ЗАПУЩЕН СЕРВЕР
 
 
 
