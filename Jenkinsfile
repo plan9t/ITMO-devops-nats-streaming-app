@@ -27,7 +27,12 @@ pipeline {
                 echo "Check pwd test with jenkins ssh keys generated"
                 sh "pwd"
 
-//                  echo "ЕЩЕ РАЗ Connecting to devops-server by SSH to execute multiple commands"
+                sh "scp /var/lib/jenkins/workspace/nats-streaming/nats-app temon01@51.250.86.139:/home/temon01/nats-builded"
+                echo "Successful copying"
+
+
+
+
 //                  sh '''
 //                      ssh -tt temon01@51.250.86.139 << EOF
 // whoami
