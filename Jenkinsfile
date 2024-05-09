@@ -49,7 +49,7 @@ cd /var/lib/jenkins/workspace/nats-streaming
 pwd
 nohup ./nats-app &
 echo "Successful starting nats-app 1"
-whoami
+sh "whoami"
 sudo telnet localhost 4222
 exit
 EOF
