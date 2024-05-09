@@ -33,7 +33,6 @@ pipeline {
                         whoami
                         pwd
                         EOF
-                        exit
                     '''
                  echo "WORKING"
             }
