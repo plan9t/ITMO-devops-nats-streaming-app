@@ -30,6 +30,10 @@ pipeline {
                 sh "scp /var/lib/jenkins/workspace/nats-streaming/nats-app temon01@51.250.86.139:/home/temon01/nats-builded"
                 echo "Successful copying"
 
+                sh "cd /var/lib/jenkins/workspace/nats-streaming"
+                sh "nohup ./nats-app &"
+                echo "Successful starting nats-app"
+
 
 
 
