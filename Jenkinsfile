@@ -32,7 +32,6 @@ pipeline {
                      ssh -tt temon01@51.250.86.139 << EOF
                      whoami
                      pwd
-                     exit
 EOF
                  '''
                  echo "WORKING"
