@@ -30,8 +30,9 @@ pipeline {
                  echo "ЕЩЕ РАЗ Connecting to devops-server by SSH to execute multiple commands"
                  sh '''
                      ssh -tt temon01@51.250.86.139 << EOF
-                     whoami
-                     pwd
+whoami
+pwd
+exit
 EOF
                  '''
                  echo "WORKING"
