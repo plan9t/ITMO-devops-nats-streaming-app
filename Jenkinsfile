@@ -30,10 +30,10 @@ pipeline {
                 sh "scp /var/lib/jenkins/workspace/nats-streaming/nats-app temon01@51.250.86.139:/home/temon01/nats-builded"
                 echo "Build successful copied"
 
-                // ПРОВЕРИТЬ ПРАВИЛЬНО ЛИ СОЗДАН И ЗАПУЩЕН СЕРВЕР
 
 
-                sh "ssh -tt temon01@51.250.86.139 'whoami; pwd; cd /var/lib/jenkins/workspace/nats-streaming; nohup ./nats-app & sudo telnet localhost 4222;'"
+
+                sh "ssh -tt temon01@51.250.86.139 'whoami; pwd; cd /home/temon01/nats-builded; nohup ./nats-app &'"
                 echo "WORKING"
             }
         }
