@@ -32,7 +32,7 @@ pipeline {
 
 
                 echo "APP STOPPED?"
-                sh "ssh -tt temon01@51.250.86.139 'whoami; pwd; cd /home/temon01/nats-builded; nohup ./nats-app > nats-app.log 2>&1; exit;'"
+                sh "ssh -o BatchMode=yes temon01@51.250.86.139 'whoami; pwd; cd /home/temon01/nats-builded; nohup ./nats-app > nats-app.log 2>&1 & exit;'"
                 echo "EOS"
             }
         }
