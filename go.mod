@@ -1,4 +1,4 @@
-module RequestTrackerL0
+module nats-app
 
 go 1.22rc2
 

@@ -19,8 +19,6 @@ func main() {
 	// Запуск HTTP сервера для прослушки запросов
 	go startHTTPServer()
 
-	fmt.Println("Привет, Лена! <3")
-
 	sc, err := stan.Connect(clusterID, "plan9t-streamer", stan.NatsURL(natsURL))
 	if err != nil {
 		log.Fatal(err)
